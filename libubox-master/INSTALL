@@ -1,0 +1,23 @@
+Installation
+
+	1.Some extra package are required:
+
+		$ sudo port install lua cmake
+
+	2.The libubox library is required. It should to compiled from source. To do this, first you have to get the source from git:  
+
+		$ git clone git://nbd.name/luci2/libubox.git
+		$ cd libubox
+
+	3. Please follow the next steps to build libubox:
+
+		$ mkdir build
+		$ cd build
+		$ cmake ..
+		$ make ubox
+
+	4. Install libubox:
+
+		$ sudo mkdir -p /opt/local/include/libubox
+		$ sudo cp ../*.h /opt/local/include/libubox
+		$ sudo cp libubox.dylib /opt/local/lib
